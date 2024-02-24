@@ -1,0 +1,253 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css');
+
+/* Basic CSS */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaeff7;
+}
+h1, h2, h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+textarea {
+    width: 100%;
+    height: 20em;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #163B7C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    resize: none;
+    animation: fadeIn .5s ease-in;
+}
+textarea::placeholder {
+    color: #163B7C;
+}
+button {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+    padding: 20px;
+    border-style: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+section {
+    height: 100vh;
+}
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: 100vh;
+    padding: 5rem;
+}
+.one {
+    flex-basis: 5%;
+}
+.one img {
+    margin: 0 auto;
+}
+.two {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0 0 0;
+}
+.vertical-1 {
+    height: 100%;
+}
+.vertical-2 > .validar {
+    margin-top: 1rem;
+}
+.validar p {
+    margin-bottom: 1rem;
+}
+.three {
+    background-color: #fafafa;
+    flex-basis: 30%;
+    box-shadow: 1px 1px 20px rgba(18, 18, 18, .1);
+    border-radius: 20px;
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 100%;
+}
+.result {
+    margin-top: 5em;
+}
+.result h1 {
+    margin-top: 1rem;
+}
+.result p {
+    margin-top: .5rem;
+    padding: 1rem 0 2rem 0;
+    text-align: left;
+}
+.result img {
+    animation: fadeIn .5s ease-in;
+    margin: 0 auto;
+}
+.hidden {
+    display: none;
+}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #081733;
+    padding: 40px;
+}
+footer img {
+    width: 120px;
+    margin: 0 auto;
+}
+.copyright {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 20px;
+}
+/* Buttons */
+.buttons {
+    animation: fadeIn .5s ease-in;
+    width: 100%;
+    display: flex;
+}
+.encryptButton {
+    color: #f1f1f1;
+    background-color: #163B7C;
+}
+.encryptButton:hover {
+    background-color: #0f2957;
+}
+.copyButton {
+    color: #f1f1f1;
+    background-color: #163B7C;
+}
+.copyButton:hover {
+    background-color: #1d4fa5;
+}
+.decryptButton {
+    color: #163B7C;
+    background-color: #dddddd;
+    border: 1px solid #163B7C;
+}
+.decryptButton:hover {
+    background-color: #c5c5c5;
+}
+/* Breakpoints */
+@media screen and (max-width: 1024px) {
+    .container {
+        display: inline-block;
+        width: 100%;
+        padding: 2rem;
+    }
+    .intro {
+        margin: 0 90% 0 0;
+    }
+    .two {
+        padding: 1rem;
+    }
+    .three {
+        padding: 1em;
+    }
+    .result {
+        margin-top: auto;
+    }
+    .result img {
+        display: none;
+    }
+    .result p {
+        padding: 1rem;
+    }
+}
+@media screen and (max-width: 720px) {
+    .buttons {
+        display: block;
+        width: 100%;
+    }
+    button {
+        margin-top: 10px;
+    }
+    .two textarea {
+        height: 6em;
+    }
+    .result p {
+        padding: 1em;
+    }
+}
+@media screen and (max-width: 520px) {
+    h1, h2, h3, button {
+        font-size: 16px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .container {
+        padding: 2rem;
+    }
+    .two textarea {
+        height: 12em;
+    }
+    .result p {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 375px) {
+    h1, h2, h3, button, .result h1 {
+        font-size: 16px;
+    }
+    .result p {
+        margin: 0;
+        font-size: 14px;
+    }
+    textarea {
+        font-size: 14px;
+    }
+    textarea::placeholder {
+        font-weight: 500;
+    }
+    .two textarea {
+        height: 10em;
+    }
+    .three {
+        border-radius: 10px;
+    }
+}
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.fadeIn {
+    animation: fadeIn 0.5s ease-in;
+}
+  
+.fadeOut {
+    animation: fadeOut 0.5s ease-out;
+}
